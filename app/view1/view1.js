@@ -9,6 +9,13 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
+.controller('View1Ctrl', ['$scope', function($scope) {
 
+    $scope.value = 5;
+    $scope.data = { message : 'tempMessage' };
+
+    $scope.tempFunction = function() {
+	$scope.value = 8;
+	alert();
+    };
 }]);
